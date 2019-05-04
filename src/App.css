@@ -22,6 +22,67 @@
   font-size: large;
 }
 
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-photo{
+  max-width: none;
+  width:  300px;
+  height: 150px;
+}
+
+
+.grid-figure{
+  flex-basis: calc(25%);
+  flex-shrink: 0;
+  margin: 2rem 1rem 1rem 2rem;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  background: beige;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+  position: relative;
+}
+
+.likes-heart{
+  background: url(http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png) center no-repeat;
+  background-size: contain;
+  font-size: 2rem;
+  padding: 1rem;
+  position: absolute;
+  color: red;
+  left: 35%;
+  top: 35%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.grid-photo-wrap{
+  position: relative;
+}
+
+.like-enter {
+  opacity: 0.01;
+}
+
+.like-enter.like-enter-active {
+  transform: offsets scale(5);
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.like-leave.like-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
