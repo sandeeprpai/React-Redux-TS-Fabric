@@ -1,5 +1,5 @@
 {
-  "name": "testingredux",
+  "name": "react_redux_fabric_typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "start": "set PORT=7777 && react-scripts-ts start",
+    "start": "set PORT=7000 && react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
