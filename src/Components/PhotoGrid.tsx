@@ -4,8 +4,10 @@ import * as actions from '../redux/Actions/Actions'
 import { connect } from 'react-redux';
 import logo from '../logo.svg';
 import Photo from './Photo';
-import '../App.css';
+// import '../App.css';
 
+
+import { getClassNames } from '../ClassNames/App_classNames';
 
 class PhotoGrid extends React.Component<any> {
 
@@ -15,15 +17,16 @@ class PhotoGrid extends React.Component<any> {
 
     public render() {
         debugger;
+        const { AppHeaderCSS, AppLogoCSS, AppTitleCSS, PhotoGridCSS } = getClassNames();
 
         return (
             <div>
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to RecipeBook</h1>
+                <header className={AppHeaderCSS}>
+                    <img src={logo} className={AppLogoCSS} alt="logo" />
+                    <h1 className={AppTitleCSS}>Welcome to RecipeBook</h1>
                 </header>
 
-                <span className="photo-grid">
+                <span className={PhotoGridCSS}>
                     {this.props.posts.map((post, i) => <Photo {... this.props} key={i} i={i} post={post} />)}
                 </span>
             </div>
